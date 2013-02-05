@@ -79,32 +79,3 @@ function addHexToCanvasAndDraw(x, y)
 	ctx.clearRect(0, 0, 800, 600);
 	hex.draw(ctx);
 }
-
-hexCanvas = document.getElementById("hexCanvas")
-hexCanvas.addEventListener("click", hexOnClick, false);
-
-function hexOnClick(e) {
-    var cell = getCursorPosition(e);
-    
-}
-
-function getCursorPosition(e) {
-    var x;
-    var y;
-    if (e.pageX || e.pageY) {
-      x = e.pageX;
-      y = e.pageY;
-    }
-    else {
-      x = e.clientX + document.body.scrollLeft +
-           document.documentElement.scrollLeft;
-      y = e.clientY + document.body.scrollTop +
-           document.documentElement.scrollTop;
-    }
-    console.log(x,y)
-    globalPoint = new HT.Point(x,y)
-    console.log(grid.GetHexAt(globalPoint).Id)
-    console.log(grid.GetHexAt(globalPoint));
-    grid.GetHexAt(globalPoint).drawRed(hexCanvas.getContext('2d'))
-
-}
