@@ -104,11 +104,7 @@ function getCursorPosition(e) {
     console.log(x,y)
     globalPoint = new HT.Point(x,y)
     console.log(grid.GetHexAt(globalPoint).Id)
-    console.log(grid.GetHexAt(globalPoint))
-    // grid.GetHexAt(globalPoint).selected = true;
-
-    console.log(grid.GetHexAt(globalPoint))
-
-
+    console.log(grid.GetHexAt(globalPoint));
+    grid.GetHexAt(globalPoint).drawRed(hexCanvas.getContext('2d'))
 
 }
