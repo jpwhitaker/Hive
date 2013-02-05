@@ -33,10 +33,15 @@ function toggleSelected(hex) {
     // console.log(x,y)
     console.log(grid.GetHexAt(hex).Id)
     console.log(grid.GetHexAt(hex));
+    var selectedHex = grid.GetHexAt(hex)
+    var selectedHexPos = selectedHex.TopLeftPoint
     console.log(hex)
     if(grid.GetHexAt(hex).selected === false){
       grid.GetHexAt(hex).selected = true;
       grid.GetHexAt(hex).drawRed(hexCanvas.getContext('2d'))
+      var img = new Image();   // Create new img element
+      img.src = './bee.png'; // Set source path
+      ctx.drawImage(img,selectedHexPos.X,selectedHexPos.Y);
     } else {
       grid.GetHexAt(hex).selected = false;
       grid.GetHexAt(hex).drawWhite(hexCanvas.getContext('2d'))
