@@ -1,0 +1,17 @@
+.neighbors {
+	float: left;
+	width: 10rem;
+	margin: 1rem;
+	
+	border-collapse: collapse;
+}
+
+.neighbors caption {
+	padding-bottom: 0.5rem;
+}
+
+.neighbors th,
+.neighbors td {
+	padding: 0.5rem;
+	border: 0.1rem solid gray;
+}

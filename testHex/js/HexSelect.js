@@ -38,12 +38,11 @@ function toggleSelected(hex) {
     console.log(hex)
     if(grid.GetHexAt(hex).selected === false){
       grid.GetHexAt(hex).selected = true;
-      grid.GetHexAt(hex).drawRed(hexCanvas.getContext('2d'))
       var img = new Image();   // Create new img element
       img.src = './bee.png'; // Set source path
       ctx.drawImage(img,selectedHexPos.X,selectedHexPos.Y);
     } else {
       grid.GetHexAt(hex).selected = false;
-      grid.GetHexAt(hex).drawWhite(hexCanvas.getContext('2d'))
+      grid.GetHexAt(hex).draw(hexCanvas.getContext('2d'))
     }
 }

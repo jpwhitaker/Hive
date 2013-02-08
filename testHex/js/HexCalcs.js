@@ -1,5 +1,3 @@
-
-
 function findHexWithWidthAndHeight()
 {
 	var width = 100;
@@ -37,11 +35,6 @@ function drawHexGrid()
 	}
 }
 
-function getHexGridZR()
-{
-	findHexWithSideLengthZAndRatio();
-	drawHexGrid();
-}
 
 function getHexGridWH()
 {
@@ -52,16 +45,11 @@ function getHexGridWH()
 function changeOrientation()
 {
 	
-		HT.Hexagon.Static.ORIENTATION = HT.Hexagon.Orientation.Rotated;
+		HT.Hexagon.Static.ORIENTATION = HT.Hexagon.Orientation.SIDE;
 	
 	drawHexGrid();
 }
 
-function debugHexZR()
-{
-	findHexWithSideLengthZAndRatio();
-	addHexToCanvasAndDraw(20, 20);
-}
 
 function debugHexWH()
 {

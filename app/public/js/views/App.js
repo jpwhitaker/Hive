@@ -2,5 +2,9 @@ define(function(require) {
   var Backbone = require('backbone'),
       Crafty = require('crafty');
 
-  console.log(Backbone);
+  var returnFn = function() {
+    //stuff in here
+  };
+
+  return "fuck";
 });
